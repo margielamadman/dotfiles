@@ -6,6 +6,8 @@ ssh-keygen -b 4096
 
 #Copy public key to destination
 ssh-copy-id username@remote_host # You need to have password SSH access for this to work
+#For public key not in ~/.ssh
+ssh-copy-id -i <local> <dest>
 
 #To change or remove a passphrase
 ssh-keygen -p
@@ -20,3 +22,7 @@ ssh-add -t 3h
 #If you are doing multiple hops use agent forwarding to ensure your private key never leaves your private computer
 ssh -A username@remote_host
 
+#Disable Password Authentication on ssh server
+sudo vim /etc/ssh/sshd_config:
+PasswordAuthentication no
+sudo systemctl reload sshd #Restart the server for changes to take effect
