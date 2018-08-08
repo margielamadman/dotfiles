@@ -37,7 +37,7 @@ term_.prefs_.set('user-css', 'http://fonts.googleapis.com/css?family=Inconsolata
 term_.prefs_.set('background-color', solarized_dark.base03);
 term_.prefs_.set('foreground-color', solarized_dark.base0);
 term_.prefs_.set('cursor-color', solarized_dark.base0);
-term_.prefs_.set('color-palette-overrides', [solarized_dark.base02, solarized_dark.red, solarized_dark.green, solarized_dark.yellow, solarized_dark.blue, solarized_dark.magenta, solarized_dark.cyan, solarized_dark.base2, solarized_dark.base03, solarized_dark.orange, solarized_dark.base01, solarized_dark.base00, solarized_dark.base0, solarized_dark.violet, solarized_dark.base1, solarized_dark.base3]);
+term_.prefs_.set('color-palette-overrides', [solarized_dark.base02, solarized_dark.red, solarized_dark.green, solarized_dark.yellow, solarized_dark.blue, solarized_dark.magenta, solarized_dark.cyan, solarized_dark.base2, solarized_dark.base3, solarized_dark.orange, solarized_dark.base01, solarized_dark.base00, solarized_dark.base0, solarized_dark.violet, solarized_dark.base1, solarized_dark.base3]);
 
 //Set font
 term_.prefs_.set('font-size',16);
