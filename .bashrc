@@ -1,9 +1,7 @@
 #Everything human readable
-alias la="ls -alhF"
-#Everything except hidden
-alias ll='ls -l'
+alias ll='ls -alhF'
 #Normal view
-alias l='ls -CF'
+alias l='ls -CFa'
 
 #Useful
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
