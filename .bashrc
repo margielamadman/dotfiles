@@ -13,3 +13,8 @@ export EDITOR=vim
 
 #set vi mode
 set -o vi
+
+#autostart tmux
+if [[ -z "$TMUX" ]]; then
+	tmux
+fi 
