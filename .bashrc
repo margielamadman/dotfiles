@@ -57,8 +57,6 @@ alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CFa'
 
-export EDITOR=vim
-
 # set vi mode
 set -o vi
 
