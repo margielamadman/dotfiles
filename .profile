@@ -31,7 +31,7 @@ export EDITOR="vim"
 export READER="zathura"
 export TERMINAL="st"
 
-# Start i3
+# Start Xserver
 if [ "$(tty)" = "/dev/tty1" ]; then
 	pgrep -x i3 || exec startx
 fi
