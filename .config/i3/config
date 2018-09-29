@@ -9,9 +9,6 @@
 for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 10
-set $term --no-startup-id $TERMINAL
-set $shutdown sudo -A shutdown -h now
-set $reboot sudo -A reboot
 
 # Run on startup
 # set background
@@ -51,13 +48,10 @@ font pango:mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# reboot
-bindsym $mod+Shift+BackSpace exec --no-startup-id prompt "Are you sure you want to reboot?" "$reboot"
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -111,11 +105,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # audio settings
-bindsym $mod+a	exec $term -e pulsemixer
+bindsym $mod+a	exec --no-startup-id st -e pulsemixer
 
-# shutdown/lock
-bindsym $mod+x	exec --no-startup-id lockscreen	
-bindsym $mod+Shift+x	exec --no-startup-id prompt "Are you sure you want to shutdown?" "$shutdown"
+# lock
+bindsym $mod+x	exec --no-startup-id i3lock -c 000000
 
 # focus the child container
 #bindsym $mod+d focus child
