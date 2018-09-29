@@ -12,7 +12,7 @@ gaps outer 10
 
 # Run on startup
 # set background
-exec_always --no-startup-id bash .fehbg
+exec_always --no-startup-id feh --bg-scale ~/wall.jpg
 # start compton
 exec --no-startup-id compton
 # start unclutter
@@ -92,6 +92,12 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# remove gaps
+bindsym $mod+Shift+f gaps inner current set 0; gaps outer current set 0
+
+# reset gaps
+bindsym $mod+Shift+g gaps inner current set 15; gaps outer current set 15
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
