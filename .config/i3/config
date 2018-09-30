@@ -14,14 +14,15 @@ gaps outer 10
 # set background
 exec_always --no-startup-id feh --bg-scale ~/wall.jpg
 # start compton
-exec --no-startup-id compton
+exec --no-startup-id compton -b
 # start unclutter
 exec --no-startup-id unclutter
 # start network manager applet
 exec --no-startup-id nm-applet
 # start flux applet
 exec --no-startup-id fluxgui
-
+# start volume icon
+exec --no-startup-id volumeicon
 
 # i3 config file (v4)
 #
