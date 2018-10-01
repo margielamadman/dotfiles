@@ -21,8 +21,6 @@ exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
 # start flux applet
 exec --no-startup-id fluxgui
-# start volume icon
-exec --no-startup-id volumeicon
 
 # i3 config file (v4)
 #
