@@ -61,9 +61,9 @@ alias l='ls -CFa'
 set -o vi
 
 # autostart tmux
-if [[ -z "$TMUX" ]]; then
-	tmux
-fi
+#if [[ -z "$TMUX" ]]; then
+#	tmux
+#fi
 
 # use powerline
 #if [ -f `which powerline-daemon` ]; then
