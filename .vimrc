@@ -1,6 +1,10 @@
 syntax enable
+colorscheme desert
 set number relativenumber
 inoremap jj <Esc>
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 "Type F5 to clear all trailing whitespace and tabs
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
