@@ -1,4 +1,5 @@
 syntax enable
+colorscheme desert
 set number relativenumber
 set ruler
 colo desert
