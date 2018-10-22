@@ -1,4 +1,3 @@
-PATH="$PATH:~/bin"
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
-export PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
