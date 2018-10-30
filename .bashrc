@@ -39,8 +39,8 @@ fi
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Setting Bash prompt. 
-export PS1="\[$(tput bold)\]\[$(tput setaf 4)\][\[$(tput setaf 6)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 6)\]\h \[$(tput setaf 7)\]\W\[$(tput setaf 4)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-      
+export PS1='\[$txtblu\][\[$txtcyn\]\u\[$txtwht\]@\[$txtwht\]\[$txtcyn\]\h\[$txtwht\] \W\[$txtblu\]] \[$txtpur\]$git_branch\[$txtred\]$git_dirty \[$txtwht\]\$ \[$txtrst\]'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
