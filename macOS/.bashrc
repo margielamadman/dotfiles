@@ -1,5 +1,5 @@
 # Setting Bash prompt. 
-export PS1="\[$(tput bold)\]\[$(tput setaf 4)\][\[$(tput setaf 6)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 6)\]\h \[$(tput setaf 7)\]\W\[$(tput setaf 4)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+export PS1='\[$txtblu\][\[$txtcyn\]\u\[$txtwht\]@\[$txtwht\]\[$txtcyn\]\h\[$txtwht\] \W\[$txtblu\]] \[$txtpur\]$git_branch\[$txtred\]$git_dirty \[$txtwht\]\$ \[$txtrst\]'
       
 # Alias definitions.
 if [ -f ~/.bash_aliases ]; then
