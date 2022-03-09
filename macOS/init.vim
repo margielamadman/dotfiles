@@ -17,7 +17,16 @@ set backspace=indent,eol,start
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 call plug#end()
+
+" colorscheme
+if (has('termguicolors'))
+  set termguicolors
+endif
+let g:material_theme_style = 'darker'
+colorscheme material
+
 
 " setting the leader key
 let mapleader = " "
@@ -30,3 +39,6 @@ nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
 
+" remapping quickfix nav
+nnoremap <C-j> :cnext<CR>
+nnoremap <C-k> :cprev<CR>
