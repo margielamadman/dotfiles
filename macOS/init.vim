@@ -9,6 +9,10 @@ set shiftwidth=4
 set expandtab
 set smartindent
 
+" mac specific stuf
+set clipboard+=unnamedplus
+set backspace=indent,eol,start
+
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -25,5 +29,4 @@ nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 " use fzf to find files
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
-
 
