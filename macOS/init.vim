@@ -27,7 +27,6 @@ endif
 let g:material_theme_style = 'darker'
 colorscheme material
 
-
 " setting the leader key
 let mapleader = " "
 " keymap to open file tree
@@ -42,3 +41,4 @@ nnoremap <leader>pf :Files<CR>
 " remapping quickfix nav
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
+
