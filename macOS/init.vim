@@ -17,10 +17,20 @@ set backspace=indent,eol,start
 call plug#begin('~/.vim/plugged')
 " LSP
 Plug 'neovim/nvim-lspconfig'
+" Autocompletion
+" Sources for nvim-cmp to use
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+" Snippet expansion
+Plug 'L3MON4D3/LuaSnip' " snippet engine
+Plug 'saadparwaiz1/cmp_luasnip' " use luasnip as a source
+" The actual nvim-cmp engine
+Plug 'hrsh7th/nvim-cmp'
+
 " Symantic Highlighting but requires ccls
 " Plug 'jackguo380/vim-lsp-cxx-highlight'
-" Autocompletion
-" Plug 'hrsh7th/nvim-cmp'
+
 " Tree-sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Colorscheme
@@ -60,6 +70,7 @@ nnoremap <leader>gf <cmd>lua require("telescope.builtin").git_files()<CR>
 nnoremap <leader>fb <cmd>lua require("telescope_config").curr_buf_fzf()<CR>
 nnoremap <leader>fg <cmd>lua require("telescope.builtin").live_grep()<CR>
 nnoremap <leader>fs <cmd>lua require("telescope.builtin").grep_string()<CR>
+nnoremap <leader>le <cmd>lua require("telescope.builtin").diagnostics()<CR>
 " LSP mappings
 " switch between source and header in c/cpp files
 nnoremap <leader>s :ClangdSwitchSourceHeader<CR>
