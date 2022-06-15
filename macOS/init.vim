@@ -23,16 +23,20 @@ Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-cmp'
 " Tree-sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Colorscheme
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'chaiscript/vim-chaiscript'
+" Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
 
-" external config files (in lua)
-luafile ~/.config/nvim/lsp.lua
+" external config files (in lua dir)
+" https://github.com/nanotee/nvim-lua-guide for more
+lua require("lsp_config")
+lua require("telescope_config")
 
 " colorscheme
 if (has('termguicolors'))
@@ -41,21 +45,26 @@ endif
 let g:material_theme_style = 'darker'
 colorscheme material
 
+" Key Mappings
 " setting the leader key
 let mapleader = " "
-" keymap to open file tree
+" open file tree
+nnoremap <leader>e :Ex<CR>
 nnoremap <leader>pv :Vex<CR>
+nnoremap <leader>ph :Sex<CR>
 " source this file
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
-
-" use fzf to find files
-nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>pf :Files<CR>
+" use Telescope to fuzzy find
+nnoremap <leader>ff <cmd>lua require("telescope.builtin").find_files()<CR>
+nnoremap <leader>gf <cmd>lua require("telescope.builtin").git_files()<CR>
+nnoremap <leader>fb <cmd>lua require("telescope_config").curr_buf_fzf()<CR>
+nnoremap <leader>fg <cmd>lua require("telescope.builtin").live_grep()<CR>
+nnoremap <leader>fs <cmd>lua require("telescope.builtin").grep_string()<CR>
+" LSP mappings
+" switch between source and header in c/cpp files
+nnoremap <leader>s :ClangdSwitchSourceHeader<CR>
 
 " remapping quickfix nav
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
-
-" bind ctrl-a for fzf select-all
-let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all,ctrl-d:deselect-all'
 
