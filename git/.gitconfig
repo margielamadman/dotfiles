@@ -1,0 +1,20 @@
+[user]
+        name = m
+        email = 39255541+margielamadman@users.noreply.github.com
+
+[alias]
+      co = checkout
+      br = branch
+      ci = commit
+      st = status
+      lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+      cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+      ca = !git add -A && git commit
+      pnc = !git pull && git cleanup
+      squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -8,9 +8,7 @@ set tabstop=2 softtabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
-
-" mac specific stuf
-set clipboard+=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set backspace=indent,eol,start
 
 " plugins
