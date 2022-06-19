@@ -12,7 +12,7 @@ set clipboard^=unnamed,unnamedplus
 set backspace=indent,eol,start
 
 " plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 " LSP
 Plug 'neovim/nvim-lspconfig'
 " Autocompletion
