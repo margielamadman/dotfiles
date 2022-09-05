@@ -42,6 +42,12 @@ require'lspconfig'.pyright.setup{
   capabilities = capabilities,
 }
 
+-- Typescript Language Server
+require'lspconfig'.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 -- Treesitter setup
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
