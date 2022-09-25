@@ -48,6 +48,12 @@ require'lspconfig'.tsserver.setup{
   capabilities = capabilities,
 }
 
+-- Javascript Language Server
+require'lspconfig'.eslint.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 -- Treesitter setup
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
