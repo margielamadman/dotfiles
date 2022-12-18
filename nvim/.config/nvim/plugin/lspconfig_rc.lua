@@ -17,7 +17,8 @@ local on_attach = function(client, bufnr)
   -- side note: <C-t> operates on the tags list, while <C-o>
   -- operates on the jumplist
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  -- replaced by lspsaga lsp_finder for now
+  -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
@@ -25,11 +26,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', '<leader>K', vim.lsp.buf.signature_help, bufopts)
   vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-  -- Diagnostics
-  vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, bufopts)
-  vim.keymap.set('n', '<leader>dk', vim.diagnostic.goto_prev, bufopts)
-  vim.keymap.set('n', '<leader>dj', vim.diagnostic.goto_next, bufopts)
 end
 
 -- Formatting
