@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 -- Remap escape
 keymap.set('i', 'jj', '<Esc>')
 -- Open file tree
-keymap.set('n', '<leader>e', ':Ex<CR>')
+-- keymap.set('n', '<leader>e', ':Ex<CR>')
 keymap.set('n', '<leader>ps', ':Sex<CR>')
 keymap.set('n', '<leader>pv', ':Vex<CR>')
 -- Create splits
@@ -26,7 +26,9 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<C-j>', ':cnext<CR>')
 keymap.set('n', '<C-k>', ':cprev<CR>')
 -- use Telescope to fuzzy find
+local tele = require('telescope')
 local builtin = require('telescope.builtin')
+keymap.set('n', '<leader>e', tele.extensions.file_browser.file_browser, {})
 keymap.set('n', '<leader>ff', builtin.find_files, {})
 keymap.set('n', '<leader>gf', builtin.git_files, {})
 keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find, {})
