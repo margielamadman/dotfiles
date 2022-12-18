@@ -28,6 +28,9 @@ packer.startup(function(use)
   -- vscode-like pictograms
   use 'onsails/lspkind-nvim'
 
+  -- lspsaga useful LSP UI plugin for hover, peek, find, etc..
+  use 'glepnir/lspsaga.nvim'
+
   -- treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
