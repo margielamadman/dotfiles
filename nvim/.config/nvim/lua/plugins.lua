@@ -8,11 +8,16 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- Statusline
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  -- colorscheme
+  use({
+      'rose-pine/neovim',
+      as = 'rose-pine',
+      config = function()
+          vim.cmd('colorscheme rose-pine')
+      end
+  })
+  use 'nvim-tree/nvim-web-devicons' -- dev icons, required by lualine
+  use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'neovim/nvim-lspconfig' -- LSP
 
   -- Autocompletion
