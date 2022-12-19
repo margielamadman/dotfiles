@@ -52,6 +52,11 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+  -- mason lsp installer
+  use { "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  }
+
   -- git
   use 'lewis6991/gitsigns.nvim'
 end)
