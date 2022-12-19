@@ -8,6 +8,7 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim' -- Common utilities
   -- colorscheme
   use 'navarasu/onedark.nvim'
 
@@ -36,12 +37,17 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  -- null-ls
+  -- Use Neovim as a language server
+  use 'jose-elias-alvarez/null-ls.nvim'
+  -- prettier code formatter
+  use 'MunifTanjim/prettier.nvim'
+
   -- autotags and autopairs
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
   -- telescope
-  use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
