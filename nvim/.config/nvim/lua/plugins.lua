@@ -50,6 +50,8 @@ packer.startup(function(use)
   -- telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-end)
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+  -- git
+  use 'lewis6991/gitsigns.nvim'
+end)
